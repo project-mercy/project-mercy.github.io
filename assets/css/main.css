@@ -111,7 +111,7 @@ input, select, textarea {
 	align-items: center;
 	text-decoration: none;
 }
-.site-nav .brand-logo { height: 28px; width: auto; }
+.site-nav .brand-logo { height: 28px; width: auto; top: -1px; display: block; position: relative;}
 .site-nav .brand-name { color: var(--pm-text); font-weight: 700; letter-spacing: 0; }
 .site-nav .links { display: flex; height: 100%; gap: 0.75rem; align-items: center; margin-top: 2px; }
 .site-nav .links a { line-height: 1; display: flex; color: var(--pm-text); text-decoration: none; padding: 0.3rem 0.6rem; border-radius: 6px; align-items: center;}
