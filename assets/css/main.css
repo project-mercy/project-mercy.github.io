@@ -88,7 +88,7 @@ input, select, textarea {
 	left: 0;
 	right: 0;
 	z-index: 10010;
-	background: rgba(255,255,255,0.9);
+	background: rgba(232,73,20,0.9);
 	backdrop-filter: saturate(180%) blur(10px);
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 }
@@ -106,7 +106,7 @@ input, select, textarea {
 	align-items: center;
 	text-decoration: none;
 }
-.site-nav .brand-logo { height: 28px; width: auto; }
+.site-nav .brand-logo { height: 38px; width: auto; }
 .site-nav .brand-name { color: var(--pm-text); font-weight: 700; letter-spacing: 0; }
 .site-nav .links { display: flex; gap: 0.75rem; align-items: center; }
 .site-nav .links a { color: var(--pm-text); text-decoration: none; padding: 0.4rem 0.6rem; border-radius: 6px; }
