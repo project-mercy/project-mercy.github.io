@@ -126,17 +126,6 @@ input, select, textarea {
 }
 
 	@media screen and (max-width: 480px) {
-		.top-nav {
-			justify-content: center; /* center on very small screens */
-			gap: 0.5rem;
-		}
-		.top-nav a {
-			font-size: 0.9rem;
-			padding: 0.45rem 0.6rem;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
 
 		html, body {
 			min-width: 320px;
