@@ -2696,6 +2696,7 @@ input, select, textarea {
 
 			.image.left img, .image.right img {
 				width: 100%;
+				height: auto;
 			}
 
 		.image.left {
@@ -2718,6 +2719,7 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				height: auto;
 			}
 
 		.image.main {
@@ -3538,13 +3540,14 @@ input, select, textarea {
 			flex-shrink: 0;
 			border-radius: 0;
 			width: 50%;
+			overflow: hidden;
 		}
 
 			.banner.style1 .image img {
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
-				object-fit: cover;
+				object-fit: contain;
 				-moz-object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
@@ -3553,9 +3556,9 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100%;
+				width: auto;
 				height: 100%;
-				border-radius: 0;
+				border-radius: 0; 
 			}
 
 		@media screen and (max-width: 1680px) {
@@ -4428,6 +4431,7 @@ input, select, textarea {
 
 	.banner .image {
 		background-color: rgba(0, 0, 0, 0.125);
+		height: auto;
 	}
 
 	.banner.invert .image {
