@@ -84,6 +84,12 @@ input, select, textarea {
 
 :root{
 	--nav-height: 48px;
+	--pm-primary: #b91c1c; /* primary brand */
+    --pm-primary-600: #991b1b; /* hover/darker */
+    --pm-accent: #d97706; /* accent */
+    --pm-surface: #ffffff; /* page bg */
+    --pm-muted: #f4f4f5; /* cards/bg subtle */
+    --pm-text: #1f2937; /* default text */
 }
 /* Responsive top navigation (site-nav) */
 .site-nav {
@@ -97,6 +103,7 @@ input, select, textarea {
 	background: rgba(232,73,20,1);
 	backdrop-filter: saturate(180%) blur(10px);
 	border-bottom: 1px solid rgba(0,0,0,0.06);
+    color: var(--pm-text);
 }
 .site-nav .nav-inner {
 	max-width: 68rem;
