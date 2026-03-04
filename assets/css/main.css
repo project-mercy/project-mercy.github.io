@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 :root{
-	--nav-height: 48px;
+	--nav-height: 60px;
 	--pm-primary: #b91c1c; /* primary brand */
     --pm-primary-600: #991b1b; /* hover/darker */
     --pm-accent: #d97706; /* accent */
@@ -98,12 +98,11 @@ input, select, textarea {
 	left: 0;
 	right: 0;
 	height: var(--nav-height);
-	font-family: Commissionerloud,sans-serif;
+	font-family: Commissionerloud, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	z-index: 10010;
 	background: rgba(232,73,20,1);
-	backdrop-filter: saturate(180%) blur(10px);
-	border-bottom: 1px solid rgba(0,0,0,0.06);
-    color: var(--pm-text);
+	color: var(--pm-text);
+	box-shadow: 0 1px 8px rgba(0,0,0,0.06);
 }
 .site-nav .nav-inner {
 	max-width: 68rem;
@@ -111,7 +110,7 @@ input, select, textarea {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.1rem 1rem;
+	padding: 0.25rem 1rem; /* consistent across sites */
 }
 .site-nav .brand {
 	display: inline-flex;
@@ -119,12 +118,17 @@ input, select, textarea {
 	align-items: center;
 	text-decoration: none;
 }
-.site-nav .brand-logo { height: 30px; width: auto; top: -13px; display: block; position: relative;}
-.site-nav .brand-name { color: var(--pm-text); font-weight: 700; letter-spacing: 0; }
-.site-nav .links { display: flex; height: 100%; gap: 0.75rem; align-items: center; margin-top: 2px; }
-.site-nav .links a { line-height: 1; display: flex; color: white !important; text-decoration: none; padding: 0.3rem 0.6rem; border-radius: 6px; align-items: center;}
-.site-nav .links a:hover { color: black !important;}
-.site-nav .links a.active { color: var(--pm-primary); box-shadow: inset 0 0 0 1px var(--pm-primary); }
+.site-nav .brand-logo { height: 36px; width: auto; display: block; margin: 0; }
+.site-nav .links { display: flex; height: var(--nav-height); gap: 1rem; align-items: center; margin-top: 0; list-style: none; padding: 0; margin: 0; }
+/* Plain text links (no button styling) — clean like home page */
+.site-nav .links a { display: inline-block; color: #ffffff !important; text-decoration: none; padding: 0 0.35rem; border-radius: 0; background: transparent; height: var(--nav-height); line-height: var(--nav-height); transition: color 0.12s ease; }
+.site-nav .links a:hover { color: rgba(255,255,255,0.9); }
+.site-nav .links a.active { color: #ffffff !important; text-decoration: underline; box-shadow: none; }
+
+/* compact spacing for small screens */
+@media screen and (max-width:980px) {
+	.site-nav .links a { padding: 0.35rem 0.6rem; }
+}
 
 /* Ensure content clears the fixed nav */
 .site-nav + #wrapper,
@@ -213,17 +217,6 @@ input, select, textarea {
 		line-height: 1.65;
 	}
 
-	a {
-		-moz-transition: color 0.2s ease-in-out;
-		-webkit-transition: color 0.2s ease-in-out;
-		-ms-transition: color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out;
-		text-decoration: underline;
-	}
-
-		a:hover {
-			text-decoration: none;
-		}
 
 	strong, b {
 		font-weight: 400;
@@ -243,7 +236,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		line-height: 1.375;
+		border-bottom: none !important;
 		letter-spacing: -0.05em;
 		margin: 0 0 1rem 0;
 	}
