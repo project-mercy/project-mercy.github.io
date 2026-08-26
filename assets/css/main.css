@@ -87,7 +87,7 @@ input, select, textarea {
 	--pm-primary: #b91c1c; /* primary brand */
     --pm-primary-600: #991b1b; /* hover/darker */
     --pm-accent: #d97706; /* accent */
-    --pm-surface: #ffffff; /* page bg */
+	--pm-surface: #fff7ed; /* page bg */
     --pm-muted: #f4f4f5; /* cards/bg subtle */
     --pm-text: #1f2937; /* default text */
 }
@@ -153,7 +153,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: var(--pm-surface);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -206,7 +206,7 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #ffffff;
+		background-color: var(--pm-surface);
 		color: #000000;
 	}
 
